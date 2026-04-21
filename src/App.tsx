@@ -45,11 +45,14 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Version 1.0.4 - Path Fix Deployment - Force Update 2026-04-21T12:35Z
-// Deployment Sync: Standard pathing applied (/ instead of subfolder).
+// Version 1.0.6 - Subfolder Pathing Verified - Force Update 2026-04-21T12:44Z
+// Deployment Sync: Hard fix for assets pathing on GH Pages.
 export default function App() {
   useEffect(() => {
-    console.log("Clinic App Loaded Successfully");
+    console.log("Clinic App v1.0.6 Loaded Successfully");
+    if (window.location.hostname.includes('github.io')) {
+      console.log("Running on GitHub Pages");
+    }
   }, []);
   const [activePage, setActivePage] = useState<"home" | string>("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
