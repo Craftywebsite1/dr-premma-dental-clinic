@@ -45,10 +45,10 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Version 1.0.7 - Definitive Production Path Fix - 2026-04-21T12:54Z
+// Version 1.0.9 - Footer and About Section Updates - 2026-04-21T13:06Z
 export default function App() {
   useEffect(() => {
-    console.log("Website Version 1.0.7 Live");
+    console.log("Website Version 1.0.9 Live");
   }, []);
   const [activePage, setActivePage] = useState<"home" | string>("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -299,12 +299,6 @@ export default function App() {
               </li>
             ))}
           </ul>
-          <a 
-            href={getWhatsAppLink("Hello Dr. Premma, I would like to know more about your services.")}
-            className="inline-flex items-center gap-2 text-clinic-primary font-bold text-lg hover:gap-4 transition-all"
-          >
-            Learn more about our doctor <ArrowRight size={20} />
-          </a>
         </div>
       </div>
     </section>
@@ -590,8 +584,8 @@ export default function App() {
       <div className="max-w-7xl mx-auto px-6 pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-sm">
         <div className="text-center md:text-left">
           <p>© 2026 {CLINIC_INFO.name}. All rights reserved.</p>
-          <p className="mt-2 text-[10px] text-slate-700 uppercase tracking-widest opacity-50">
-            Project Build: 220421-1254 | {CLINIC_INFO.agency}
+          <p className="mt-2 text-xs text-slate-500">
+            Developed by Naitik Bothara owner of craftyweb developer
           </p>
         </div>
         <div className="flex gap-8">
