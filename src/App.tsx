@@ -45,14 +45,10 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Version 1.0.6 - Subfolder Pathing Verified - Force Update 2026-04-21T12:44Z
-// Deployment Sync: Hard fix for assets pathing on GH Pages.
+// Version 1.0.7 - Definitive Production Path Fix - 2026-04-21T12:54Z
 export default function App() {
   useEffect(() => {
-    console.log("Clinic App v1.0.6 Loaded Successfully");
-    if (window.location.hostname.includes('github.io')) {
-      console.log("Running on GitHub Pages");
-    }
+    console.log("Website Version 1.0.7 Live");
   }, []);
   const [activePage, setActivePage] = useState<"home" | string>("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -594,8 +590,8 @@ export default function App() {
       <div className="max-w-7xl mx-auto px-6 pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-sm">
         <div className="text-center md:text-left">
           <p>© 2026 {CLINIC_INFO.name}. All rights reserved.</p>
-          <p className="mt-2 text-xs text-slate-600">
-            Developed by <span className="text-slate-400">{CLINIC_INFO.developer}</span> owner of <span className="text-slate-400">{CLINIC_INFO.agency.toLowerCase()}</span>
+          <p className="mt-2 text-[10px] text-slate-700 uppercase tracking-widest opacity-50">
+            Project Build: 220421-1254 | {CLINIC_INFO.agency}
           </p>
         </div>
         <div className="flex gap-8">
