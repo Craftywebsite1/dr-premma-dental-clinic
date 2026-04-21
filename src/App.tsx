@@ -45,8 +45,8 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Version 1.0.3 - GitHub Pages Subfolder Pathing - Force Update 2026-04-21T12:18Z
-// Deployment Sync: Final path verification applied.
+// Version 1.0.4 - Path Fix Deployment - Force Update 2026-04-21T12:35Z
+// Deployment Sync: Standard pathing applied (/ instead of subfolder).
 export default function App() {
   useEffect(() => {
     console.log("Clinic App Loaded Successfully");
